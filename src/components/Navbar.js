@@ -39,7 +39,7 @@ const MyNavbar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav className="mx-auto text-center"> {/* Use mx-auto and text-center */}
             <Nav.Link href="/" style={linkStyle} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
               Home
             </Nav.Link>

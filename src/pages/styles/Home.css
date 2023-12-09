@@ -1,0 +1,24 @@
+/* home.css */
+.text-center {
+  color: #ffffff; /* Set the desired text color */
+  background-color: transparent; /* Set the desired background color or leave as transparent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 10px; /* Adjust the width of the cursor */
+  height: 1em; /* Adjust the height of the cursor */
+  background-color: white; /* Set the background color to white */
+  animation: blink-animation 1s step-end infinite;
+  opacity: 70%;
+}
+
+@keyframes blink-animation {
+  50% {
+    background-color: transparent; /* Set the background color to transparent at 50% of the animation */
+  }
+}
