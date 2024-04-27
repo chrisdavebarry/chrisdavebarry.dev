@@ -1,52 +1,61 @@
 import React from 'react';
-import './styles/Projects.css'; // Import the stylesheet
-import { Col, Row, Card, CardImg, CardBody, CardTitle, CardText, Button } from 'react-bootstrap';
+import { Card, Row, Col, Image, Button } from 'react-bootstrap';
+import './styles/Projects.css';
 
-const ProjectCard = ({ title, description, imageUrl, githubUrl }) => {
+
+const projects = [
+  {
+    title: "This Website",
+    description: "This website was written using ReactJS and React-Bootstrap. See link for source code.",
+    githubLink: "https://github.com/chrisdavebarry/chrisdavebarry.dev",
+    imageUrl: "path/to/project-1.jpg", // Replace with your image path
+  },
+  {
+    title: "Project Title 1",
+    description: "A brief description of your project 1.",
+    githubLink: "https://github.com/your-username/project-1",
+    imageUrl: "path/to/project-1.jpg", // Replace with your image path
+  },
+  {
+    title: "This Website",
+    description: "This website was written using ReactJS and React-Bootstrap. See link for source code.",
+    githubLink: "https://github.com/chrisdavebarry/chrisdavebarry.dev",
+    imageUrl: "path/to/project-1.jpg", // Replace with your image path
+  },
+  {
+    title: "Project Title 1",
+    description: "A brief description of your project 1.",
+    githubLink: "https://github.com/your-username/project-1",
+    imageUrl: "path/to/project-1.jpg", // Replace with your image path
+  },
+];
+
+
+const Projects = () => {
   return (
-    <Col xs={12} className="mb-3" style={{ maxWidth: "600px" }}>
-      <Card style={{ display: 'flex', flexDirection: 'row' }}>
-        <CardImg variant="top" src={imageUrl} style={{ width: '150px', height: '150px', objectFit: 'cover' }} />
-        <CardBody style={{ flex: 1, padding: '1rem' }}> {/* Added flex: 1 for even distribution */}
-          <CardTitle>{title}</CardTitle>
-          <CardText>{description}</CardText>
-          <Button variant="primary" href={githubUrl} target="_blank" rel="noreferrer">
-            View on GitHub
-          </Button>
-        </CardBody>
-      </Card>
-    </Col>
+    <div className="projects">
+      {projects.map((project) => (
+        <Col key={project.title} xs={12} className="mb-4">  {}
+          <Card className="custom-card-width bg-light">
+            <Row>
+              <Col xs={6} md={4}>
+                <Image src={project.imageUrl} alt={project.title} fluid rounded />
+              </Col>
+              <Col xs={6} md={8}>
+                <Card.Body>
+                  <Card.Title>{project.title}</Card.Title>
+                  <Card.Text>{project.description}</Card.Text>
+                  <Button variant="primary" href={project.githubLink} target="_blank" rel="noreferrer noopener">
+                    View on GitHub
+                  </Button>
+                </Card.Body>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      ))}
+    </div>
   );
 };
 
-export default function Projects() {
-  const projects = [
-    {
-      title: 'chrisdavebarry.dev',
-      description: 'A personal portfolio website created using ReactJS & Bootstrap.',
-      imageUrl: '/img/logo.png',
-      githubUrl: 'https://github.com/chrisdavebarry/chrisdavebarry.dev',
-    },
-    {
-      title: 'CommandLineTasks',
-      description: 'A CLI task tracking app written in C++.',
-      imageUrl: '/img/logo.png',
-      githubUrl: 'https://github.com/chrisdavebarry/chrisdavebarry.dev',
-    },
-  {
-      title: 'CommandLineTasks',
-      description: 'A CLI task tracking app written in C++.',
-      imageUrl: '/img/logo.png',
-      githubUrl: 'https://github.com/chrisdavebarry/chrisdavebarry.dev',
-    },  ];
-
-  return (
-    <div className="d-flex">
-      <Row xs={1}>
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
-      </Row>
-    </div>
-  );
-}
+export default Projects;

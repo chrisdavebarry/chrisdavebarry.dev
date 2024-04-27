@@ -1,32 +1,25 @@
-/* src/pages/styles/projects.css */
-
-.card{
-    background-color: #2c3137;
+.custom-card-width {
+  width: 600px; /* Adjust width as desired */
+  max-width: 100%; /* Ensure responsiveness */
 }
-.card-img-top {
-    border-radius: 10px 0 0 10px; /* Rounded top left corner */
-  }
-  
-  .card-title {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: white;
-  }
 
-  .card-text{
-    color: white;
-  }
-  
-  .btn {
-    background-color: #3498db;
-    border-color: #3498db;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #2980b9;
-  }
-  
+.projects {
+  margin-top: 20px;
+}
+
+.mb-4 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  --bs-btn-bg: #792aac;
+  --bs-btn-border-color: #792aac;
+}
+
+.card {
+  color: #ffffff;
+  background-color: #1f2226!important;
+  border-color: #1f2226!important;
+}
