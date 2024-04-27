@@ -4,8 +4,8 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 const MyNavbar = () => {
   const linkStyle = {
     fontWeight: 'bold',
-    color: '#fff', // Set the default color
-    transition: 'color 0.3s ease', // Add a smooth transition
+    color: '#fff',
+    transition: 'color 0.3s ease',
   };
 
   const handleHover = (e) => {
@@ -33,18 +33,18 @@ const MyNavbar = () => {
             alt="yes"
             height="30"
             className="d-inline-block align-top"
-            style={{ transition: 'filter 0.3s ease' }} // Add a smooth transition to the image filter property
+            style={{ transition: 'filter 0.3s ease' }}
           />
           Chris Barry
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto text-center"> {/* Use mx-auto and text-center */}
+          <Nav className="mx-auto text-center"> {}
             <Nav.Link href="/" style={linkStyle} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
               Home
             </Nav.Link>
-            <Nav.Link href="contact" style={linkStyle} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-              Contact
+            <Nav.Link href="about" style={linkStyle} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+              About
             </Nav.Link>
             <Nav.Link href="blog" style={linkStyle} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
               Blog

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Container className="text-center-vh">
       <Row className="custom-row">
-        <Col xs={12} md={8}>
+        <Col xs={12} md={5}>
           <h1>cbarry@localhost:~<span className="blinking-cursor"></span></h1>
         </Col>
         <div className="logo-container">

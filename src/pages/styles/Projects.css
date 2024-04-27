@@ -1,21 +1,22 @@
-.custom-card-width {
-  width: 600px; /* Adjust width as desired */
-  max-width: 100%; /* Ensure responsiveness */
-}
-
 .projects {
   margin-top: 20px;
-}
-
-.mb-4 {
   display: grid;
   justify-content: center;
-  align-items: center;
+}
+
+.row{
+  justify-content: center;
+  width: max-content;
 }
 
 .btn-primary {
   --bs-btn-bg: #792aac;
   --bs-btn-border-color: #792aac;
+}
+
+.col-12{
+  display:flex;
+  justify-content: center;
 }
 
 .card {
